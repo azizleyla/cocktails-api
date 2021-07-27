@@ -291,10 +291,11 @@ input::placeholder {
 .drink-ingredients .far {
   margin-right: 1rem;
 }
-ul {
-  display: block;
-}
+
 .single-drink .btn {
   display: inline-block;
   margin-top: 2rem;
+}
+.hide {
+  display: none;
 }
