@@ -29,7 +29,7 @@ const displayDrinks = async (drinks) => {
         titleElement.textContent = "";
 
         singleDrinkElement.addEventListener('click', function () {
-            let ingredients = "";
+            let ingredients;
             const list = [
                 drink.strIngredient1,
                 drink.strIngredient2,
@@ -44,7 +44,8 @@ const displayDrinks = async (drinks) => {
             })
 
 
-            sectionCenter.style.display = "none"
+            sectionCenter.classList.add('hide');
+            searchForm.classList.add('hide');
             let element = "";
             element += `
             <img src="${image}" class="drink-img" alt="" />
@@ -69,7 +70,7 @@ const getData = async (URL) => {
     const data = await response.json();
     drinks = data.drinks;
     displayDrinks(drinks);
-    console.log(drinks);
+
 }
 searchInput.addEventListener('keyup', searchDrinks);
 
